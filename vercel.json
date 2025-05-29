@@ -1,12 +1,6 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm run install:front",
   "framework": "nextjs",
-  "outputDirectory": "front/.next",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install"
 }
