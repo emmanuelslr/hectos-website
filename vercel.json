@@ -1,9 +1,8 @@
 {
-  "version": 2,
-  "rootDirectory": "front",
-  "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
+  "outputDirectory": "front/.next",
+  "buildCommand": "cd front && npm install && npm run build",
+  "installCommand": "cd front && npm install",
+  "framework": null,
   "rewrites": [
     {
       "source": "/(.*)",
