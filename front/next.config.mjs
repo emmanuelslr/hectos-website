@@ -1,21 +1,17 @@
+import path from 'path';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
   reactStrictMode: true,
   swcMinify: true,
+  output: 'standalone',
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'randomuser.me',
-        pathname: '/**',
-      },
-    ],
+    domains: ['images.unsplash.com', 'randomuser.me'],
+    unoptimized: true
+  },
+  experimental: {
+    appDir: true,
+    outputFileTracingRoot: path.join(__dirname, '../')
   }
 };
 
