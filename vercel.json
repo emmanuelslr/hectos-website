@@ -1,12 +1,10 @@
 {
   "buildCommand": "cd front && npm install && npm run build",
-  "installCommand": "cd front && npm install",
-  "framework": "nextjs",
-  "monorepo": true,
+  "outputDirectory": "front/.next",
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/front/$1"
+      "destination": "/$1"
     }
   ]
 }
