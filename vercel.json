@@ -1,15 +1,12 @@
 {
-  "version": 2,
-  "builds": [
+  "buildCommand": "cd front && npm install && npm run build",
+  "outputDirectory": "front/.next",
+  "installCommand": "cd front && npm install",
+  "framework": "nextjs",
+  "rewrites": [
     {
-      "src": "front/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "front/$1"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }

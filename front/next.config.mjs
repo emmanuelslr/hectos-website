@@ -3,23 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'randomuser.me',
-        pathname: '/**',
-      },
-    ],
+    domains: ['images.unsplash.com', 'randomuser.me'],
+    unoptimized: true
   },
-  // Set the base path for production
-  basePath: process.env.NODE_ENV === 'production' ? '' : '',
-  // Enable static exports
-  output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined
+  experimental: {
+    appDir: true
+  }
 };
 
 export default nextConfig;

@@ -1,0 +1,13 @@
+{
+  "name": "hectos-website-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "front"
+  ],
+  "scripts": {
+    "dev": "cd front && npm run dev",
+    "build": "cd front && npm run build",
+    "start": "cd front && npm run start"
+  }
+}
