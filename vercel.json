@@ -1,8 +1,15 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/front/$1" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "front/package.json",
+      "use": "@vercel/next"
+    }
   ],
-  "buildCommand": "cd front && npm install && npm run build",
-  "outputDirectory": "front/.next",
-  "installCommand": "cd front && npm install"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "front/$1"
+    }
+  ]
 }
