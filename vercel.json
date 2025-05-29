@@ -1,6 +1,14 @@
 {
   "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install"
+  "buildCommand": "cd front && npm install && npm run build",
+  "outputDirectory": "front/.next",
+  "installCommand": "cd front && npm install",
+  "projectSettings": {
+    "framework": "nextjs",
+    "buildCommand": null,
+    "devCommand": null,
+    "installCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": "front"
+  }
 }
