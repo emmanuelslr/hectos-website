@@ -8,6 +8,11 @@
   "scripts": {
     "dev": "cd front && npm run dev",
     "build": "cd front && npm run build",
-    "start": "cd front && npm run start"
+    "start": "cd front && npm run start",
+    "install:front": "cd front && npm install"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }
