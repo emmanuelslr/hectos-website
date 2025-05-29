@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
   reactStrictMode: true,
   swcMinify: true,
   images: {
@@ -16,7 +15,11 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-  }
+  },
+  // Set the base path for production
+  basePath: process.env.NODE_ENV === 'production' ? '' : '',
+  // Enable static exports
+  output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined
 };
 
 export default nextConfig;
