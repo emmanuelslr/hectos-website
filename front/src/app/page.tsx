@@ -12,7 +12,7 @@ import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-white">
+    <main className="relative min-h-screen bg-white bg-red-500">
       {/* Fixed Navbar */}
       <Navbar />
 
