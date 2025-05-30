@@ -52,3 +52,5 @@ export default function SecondHero() {
         </div>
       </div>
     </section>
+  );
+}
